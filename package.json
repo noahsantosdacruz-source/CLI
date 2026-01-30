@@ -1,6 +1,16 @@
 {
-  "name": "ClI_NOJO",
+  "name": "cli_nojo",
   "version": "1.0.0",
-  "description": "CLI",
-  "main": "src/index.js"
+  "type": "module",
+  "description": "Mon CLI",
+  "main": "index.js",
+  "bin": {
+    "cli-nojo": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
