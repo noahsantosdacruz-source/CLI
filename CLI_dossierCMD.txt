@@ -1,0 +1,24 @@
+CLI
+Commande
+ cd C:\Users\noahs\OneDrive\CLI
+ mkdir pour les dossiers
+npm install
+
+Pour voir la liste de commande:
+node bin/cli.js --help
+
+Pour voir la version:
+node bin/cli.js --version
+
+Pour mettre un nouveau projet:
+node bin/cli.js init
+
+Pour le constuire ce projet:
+node bin/cli.js build
+
+Pour le déployer ce projet:
+node bin/cli.js deploy
+
+
+
+

@@ -1,0 +1,6 @@
+{
+  "name": "ClI_NOJO",
+  "version": "1.0.0",
+  "description": "CLI",
+  "main": "src/index.js"
+}
