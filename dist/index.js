@@ -1,15 +1,16 @@
 import { program } from 'commander';
 import pkg from '../package.json' with { type: 'json' };
-import { initCommand } from './commands/init.js';
-import { buildCommand } from './commands/build.js';
-import { deployCommand } from './commands/deploy.js';
+import { initCommand } from '../src/commands/init.js';
+import { buildCommand } from '../src/commands/build.js';
+import { deployCommand } from '../src/commands/deploy.js';
 import chalk from 'chalk';
 
 const { version } = pkg;
 
 console.log(chalk.magenta.bold(`
 ╔═══════════════════════════════════════╗
-║        CLI NOJO - v${version}         ║
+║                                       ║
+║      CLI NOJO - v${version}           ║
 ║   Donne ton projet à la lumière BG    ║
 ╚═══════════════════════════════════════╝
 Bienvenue dans le CLI  de NOJO! 

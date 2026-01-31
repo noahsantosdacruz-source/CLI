@@ -1,17 +1,20 @@
-import fs from 'fs';
-import PDFDocument from 'pdfkit';
+import chalk from 'chalk';
+import fs from 'fs/promises';
 
-const data = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
+export default async function jsonToPdf(options) {
+  console.log(chalk.blue('\n📄 Conversion JSON vers PDF...\n'));
 
-const doc = new PDFDocument();
-doc.pipe(fs.createWriteStream('output.pdf'));
+  if (!options.file) {
+    console.error(chalk.red('❌ Le fichier JSON est requis (-f, --file)'));
+    return;
+  }
 
-doc.fontSize(20).text('Informations du projet', { underline: true });
-doc.moveDown();
-
-Object.entries(data).forEach(([key, value]) => {
-  doc.fontSize(12).text(`${key} : ${value}`);
-});
-
-doc.end();
-console.log('PDF généré avec succès : output.pdf');
+  try {
+    const jsonContent = await fs.readFile(options.file, 'utf-8');
+    const data = JSON.parse(jsonContent);
+    
+    console.log(chalk.green('✓ Fichier JSON lu avec succès'));
+  } catch (error) {
+    console.error(chalk.red('❌ Erreur:'), error.message);
+  }
+}

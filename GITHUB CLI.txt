@@ -1,0 +1,203 @@
+GITHUB CLI
+
+CLI = nom du dépôt sur GitHub
+--public = dépôt public (visible par tous)
+--private = dépôt privé (seulement vous)
+--source=. = utilise le dossier actuel
+--push = envoie directement sur GitHub
+
+Contrendu:
+# 📋 COMPTE-RENDU : Installation et Configuration Git/GitHub
+
+## ✅ CE QUI A ÉTÉ FAIT
+
+### 1. Installation des outils (PowerShell)
+- ✅ **Chocolatey** : Gestionnaire de paquets Windows installé
+- ✅ **GitHub CLI (gh)** : Outil en ligne de commande GitHub installé
+- ✅ **Git** : Système de gestion de versions installé
+- ✅ **Authentification GitHub** : Compte connecté avec succès
+
+### 2. Configuration Git
+```powershell
+git config --global user.name "Cruz_Noah"
+git config --global user.email "votre-email@example.com"
+```
+- ✅ Identité Git configurée pour tous les commits
+
+### 3. Publication du projet CLI sur GitHub
+- ✅ Dossier local : `C:\Users\noahs\OneDrive\Bureau\CLI`
+- ✅ Dépôt GitHub créé : `https://github.com/noahsantosdacruz-source/CLI`
+- ✅ Type de dépôt : **Privé**
+- ✅ Code poussé avec succès (plusieurs commits effectués)
+
+### 4. Modifications apportées au projet CLI
+- ✅ Ajout de `"type": "module"` dans `package.json` (support ES6)
+- ✅ Création du fichier `.gitignore` (ignore node_modules)
+- ✅ Correction du fichier `bin/cli.js` :
+  - Suppression des imports manquants (`init.js`)
+  - Correction de la variable `version` non définie
+  - Ajout de la gestion des arguments `--help` et `--version`
+
+### 5. Commits effectués
+1. `"Ajout type module dans package.json"`
+2. `"Ajout .gitignore"`
+3. `"Ajout gestion des arguments --help et --version"`
+4. `"Correction du CLI - suppression des imports manquants"`
+
+---
+
+## 🛠️ ÉTAT ACTUEL DU PROJET
+
+### Structure du projet CLI
+```
+C:\Users\noahs\OneDrive\Bureau\CLI\
+├── bin/
+│   └── cli.js           ✅ Corrigé et fonctionnel
+├── node_modules/        🚫 Ignoré par Git (.gitignore)
+├── package.json         ✅ Configuré (type: module)
+├── package-lock.json
+└── .gitignore          ✅ Créé (ignore node_modules)
+```
+
+### Fonctionnalités du CLI
+- ✅ `node bin/cli.js --help` → Affiche l'aide
+- ✅ `node bin/cli.js --version` → Affiche la version
+- ✅ `node bin/cli.js` → Message de bienvenue
+
+---
+
+## 📚 COMPÉTENCES ACQUISES
+
+### Commandes Git maîtrisées
+| Commande | Fonction |
+|----------|----------|
+| `git init` | Initialiser un dépôt Git |
+| `git add .` | Ajouter tous les fichiers |
+| `git commit -m "message"` | Sauvegarder les modifications |
+| `git push` | Envoyer sur GitHub |
+| `git status` | Vérifier l'état des fichiers |
+| `git remote -v` | Voir les dépôts distants |
+| `git remote add origin URL` | Connecter au dépôt GitHub |
+
+### Commandes GitHub CLI maîtrisées
+| Commande | Fonction |
+|----------|----------|
+| `gh auth login` | Se connecter à GitHub |
+| `gh repo create` | Créer un dépôt sur GitHub |
+| `gh repo view --web` | Ouvrir le dépôt dans le navigateur |
+| `gh repo clone` | Cloner un dépôt |
+
+### Commandes PowerShell utilisées
+| Commande | Fonction |
+|----------|----------|
+| `cd` | Changer de répertoire |
+| `mkdir` | Créer un dossier |
+| `echo "texte" > fichier` | Créer un fichier |
+| `notepad fichier` | Ouvrir un fichier |
+| `refreshenv` | Recharger les variables d'environnement |
+
+---
+
+## ⚠️ PROBLÈMES RENCONTRÉS ET RÉSOLUS
+
+### 1. Erreur de verrouillage Chocolatey
+**Problème :** `Unable to obtain lock file access`  
+**Solution :** Suppression du fichier de verrouillage + réinstallation
+
+### 2. Git non reconnu après installation
+**Problème :** `Le terme 'git' n'est pas reconnu`  
+**Solution :** Fermeture/réouverture de PowerShell pour rafraîchir le PATH
+
+### 3. Dépôt déjà existant sur GitHub
+**Problème :** `Name already exists on this account`  
+**Solution :** Connexion manuelle avec `git remote add origin`
+
+### 4. Avertissement Module Node.js
+**Problème :** `MODULE_TYPELESS_PACKAGE_JSON Warning`  
+**Solution :** Ajout de `"type": "module"` dans package.json
+
+### 5. Erreur module manquant
+**Problème :** `Cannot find module 'init.js'`  
+**Solution :** Suppression des imports non nécessaires dans cli.js
+
+### 6. Variable non définie
+**Problème :** `ReferenceError: version is not defined`  
+**Solution :** Remplacement par la version en dur "1.0.0"
+
+---
+
+## 📂 FICHIERS CRÉÉS/MODIFIÉS
+
+| Fichier | Action | Statut |
+|---------|--------|--------|
+| `package.json` | Modifié | ✅ Ajout "type": "module" |
+| `.gitignore` | Créé | ✅ Ignore node_modules |
+| `bin/cli.js` | Corrigé | ✅ Fonctionnel |
+
+---
+
+## 🎯 WORKFLOW GIT ÉTABLI
+
+### Cycle de travail quotidien
+```
+1. git status          → Vérifier les modifications
+2. git add .           → Ajouter les fichiers
+3. git commit -m "..." → Sauvegarder
+4. git push            → Envoyer sur GitHub
+```
+
+### En cas de collaboration
+```
+1. git pull            → Récupérer les modifications des autres
+2. [Travailler...]
+3. git push            → Envoyer vos modifications
+```
+
+---
+
+## 📊 STATISTIQUES
+
+- **Outils installés :** 3 (Chocolatey, Git, GitHub CLI)
+- **Commits effectués :** 4+
+- **Dépôts créés :** 1 (CLI - privé)
+- **Fichiers suivis par Git :** ~10
+- **Problèmes résolus :** 6
+- **Durée de la session :** ~1-2 heures
+
+---
+
+## 🚀 PROCHAINES ÉTAPES POSSIBLES
+
+### Court terme
+- [ ] Ajouter plus de commandes au CLI
+- [ ] Créer des tests pour le CLI
+- [ ] Documenter le projet dans le README.md
+- [ ] Publier le package sur npm
+
+### Apprentissage
+- [ ] Apprendre les branches Git (`git branch`, `git merge`)
+- [ ] Découvrir les Pull Requests sur GitHub
+- [ ] Explorer GitHub Actions (CI/CD)
+- [ ] Maîtriser la résolution de conflits Git
+
+---
+
+## 💾 SAUVEGARDE DES CONNAISSANCES
+
+**Guide complet créé :** ✅  
+Un document Bloc-notes avec toutes les commandes Git/GitHub et leurs explications a été préparé pour référence future.
+
+---
+
+## ✨ RÉSULTAT FINAL
+
+🎉 **Projet CLI opérationnel et versionné sur GitHub**  
+🎉 **Environnement de développement Git/GitHub fonctionnel**  
+🎉 **Compétences de base en gestion de versions acquises**
+
+---
+
+**Date :** 30-31 janvier 2026  
+**Utilisateur :** noahsantosdacruz-source  
+**Projet :** CLI (Command Line Interface)  
+**Statut :** ✅ Succès

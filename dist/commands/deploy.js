@@ -1,14 +1,12 @@
 import chalk from 'chalk';
 
 export async function deployCommand(options) {
-  console.log(chalk.cyan.bold('\n🚀 Deploying your project...\n'));
+  console.log(chalk.blue('\n🚀 Déploiement en cours...\n'));
+  console.log(chalk.gray(`Environnement: ${options.env}`));
 
-  const env = options.env;
-  console.log(chalk.yellow(`Deploying to ${env}...`));
-
-  // Simulation
-  await new Promise(resolve => setTimeout(resolve, 2000));
-
-  console.log(chalk.green.bold('\n✨ Deployed successfully!\n'));
-  console.log(chalk.cyan(`Environment: ${env}\n`));
+  try {
+    console.log(chalk.green('\n✓ Déploiement réussi!'));
+  } catch (error) {
+    console.error(chalk.red('❌ Erreur:'), error.message);
+  }
 }
