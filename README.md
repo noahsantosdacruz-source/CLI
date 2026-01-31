@@ -10,7 +10,7 @@
 
 ---
 
-## 🎯 À propos de moi
+##  À propos de moi
 
 Étudiant passionné par l'informatique, titulaire d'un **Bac Pro mention Bien** et actuellement en **BTS SIO** à Ingetis Paris. Je recherche une **alternance pour septembre 2026** avec un rythme d'une fois toutes les deux semaines (2 ou 3 jours en entreprise).
 
